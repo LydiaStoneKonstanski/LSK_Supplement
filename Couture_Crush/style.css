@@ -1,0 +1,49 @@
+.gallery  {
+  display: grid;
+  width: 220px; /* controls the size */
+}
+.gallery > img {
+  grid-area: 1 / 1;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 10px solid #f2f2f2;
+  box-shadow: 0 0 4px #0007;
+  z-index: 2;
+}
+.gallery img:last-child {
+  margin-top: 30px;
+  animation: slide 2s linear forwards paused;
+}
+.gallery:hover img {
+  animation-play-state: running;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+    z-index: 2;
+  }
+  50% {
+    transform: translateX(120%);
+    z-index: 2;
+  }
+  50.1% {
+    transform: translateX(120%);
+    z-index: 1;
+  }
+  100% {
+    transform: translateX(0%);
+    z-index: 1;
+  }
+}
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
