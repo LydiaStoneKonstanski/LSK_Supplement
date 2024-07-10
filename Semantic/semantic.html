@@ -1,3 +1,5 @@
+<!-- THIS IS THE NON-SEMANTIC VERSION
+
 <!DOCTYPE html>
 <html lang="en">
   <body>
@@ -14,5 +16,68 @@
             </ul>
         </div>
     </div>
+    <div id="main">
+      <div id="section">
+            <h2>Facts About Dogs</h2>
+            <div id="article">
+            <p>Dogs have a sense of time. It's been proven that they know the difference between a hour and five. If conditioned to, they can predict future events, such as regular walk times.
+            </p>
+            </div>
+              <div id="aside">
+                <p>A study was conducted on dogs being away from their owners for varying hours and the studies show that dogs who were away from their owners the longest showed the greatest amount of affection!
+                </p>
+              </div>
+        </div>
+    </div>
+    <div id="footer>
+      <p>Contact me at +1 234 567 8910</p>
+    </div>
+
+  </body>
+</html> -->
+
+
+<!-- THIS IS THE SEMANTIC VERSION -->
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <header> <!-- For h1-h6 headings and introductory content -->
+        <h1>Navigational Links</h1>
+        <nav> <!-- Navigation is for menus and tables of contents-->
+            <ul>
+                <li><a
+                        href="#home">Home</a></li>
+                <li><a
+                        href="#posts">Posts</a></li>
+                <li><a
+                        href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main> <!--The bulk of the page-->
+        <section> <!-- defines an area of the main content devoted to a topic. May be used outside of article tag or inside it -->
+            <article> <!--defines a free-standing exploration of the topic at hand. May contain sections of it's own.-->
+            <h2>Facts About Dogs</h2>
+            <p>Dogs have a sense of time. It's been proven that they know the difference between a hour and five. If conditioned to, they can predict future events, such as regular walk times.
+            </p>
+            </article>
+            <aside> <!-- used for bibliographies, editorial sidebars, comments, end notes, pull quotes, and adddtional info. Anything that isn't essential to understanding the main content.-->
+                <p>A study was conducted on dogs being away from their owners for varying hours and the studies show that dogs who were away from their owners the longest showed the greatest amount of affection!
+                </p>
+            </aside>
+        </section>
+        <figure> <!-- encapsulates illustrative media: image, diagram, illustration, code snippet-->
+            <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg"/>
+            <figcaption>This dog is a very good boy</figcaption> <!-- documents figure from within the figure tags-->
+        </figure>
+        <audio controls>
+        <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+        </audio>
+    </main>
+
+    <footer> <!-- Contact Info, Copyright info, terms of use, sitemap, and reference to top of page go here -->
+        <p>Contact me at +1 234 567 8910</p>
+    </footer>
+
   </body>
 </html>
