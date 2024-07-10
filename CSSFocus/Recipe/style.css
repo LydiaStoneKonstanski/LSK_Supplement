@@ -1,0 +1,27 @@
+* {
+    font-family: Helvetica;
+}
+/* by type*/
+img {
+    height: 150px;
+}
+/* by class*/
+.description {
+    font-size: 20px;
+}
+/* by id*/
+#cook-time {
+    font-weight: bold;
+}
+/* descendant combinator*/
+.ingredients li {
+    list-style: square;
+}
+/* chained*/
+p.time {
+    color: gray;
+}
+/* chained within a nest is same as chained*/
+a.external-link {
+    color: SeaGreen;
+}
