@@ -45,6 +45,7 @@ nav a {
 
 }
 
+/*Content Header*/
 .header {
     background-image: url url("https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_burgerphoto.jpeg");
     background-position: center;
@@ -64,7 +65,65 @@ nav a {
     width: 68%;
 }
 
+/*Content Body*/
+
 content.body {
     width: 90%;
     margin: 0 auto;
+}
+
+.body p {
+    color: #333333;
+    font-weight: 100;
+    line-weight: 34px;
+    width: 90%;
+    margin-top; 18px;
+}
+
+/*Content Button*/
+
+.button {
+    border: 1px solid blue;
+    border-radius: 4px;
+    color: #05A8AA;
+    display: block;
+    font-weight: 700;
+    width: 200px;
+    padding: 20px;
+    margin: 40px auto;
+}
+
+.button:hover {
+    background-color: #05A8AA;
+    border: 1px solid ##05A8AA;
+    color: #FFF;
+}
+
+/*Content Nutrition*/
+
+ul.nutrition {
+    padding: 20px;
+}
+
+ul.nutrition li {
+    display: inline-block;
+    background-color: #05A8AA;
+    list-style: none;
+    width: 200px;
+    padding: 10 20;
+    margin: 3px;
+}
+
+.nutrition .category {
+    color: white;
+    font-weight: 100;
+    letter-spacing: 2px;
+    display: block;
+}
+
+.nutrition .value {
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
