@@ -223,3 +223,13 @@ PADDING SHORTHAND
   border: 1px solid red;
   color: red;
 }
+
+/*VISIBILITY
+visibility: hidden; removes the content of the element but leaves the space.
+display: none; removes the content and the space.
+visibility: visible;
+visibility: collapse; */
+
+.future {
+    visibility: hidden;
+}
