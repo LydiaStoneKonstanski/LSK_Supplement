@@ -1,0 +1,225 @@
+/* Box Model: Dimensions, Borders, Paddings, Margins*/
+
+/*RESETTING BROWSER DEFAULTS for margin and padding so everything displays right
+* {
+    margin: 0;
+    padding: 0;
+}*/
+
+/*DIMENSION MAX/MIN HEIGHT/WIDTH
+Height and Width can be set on their own. However, the variety of browsers and
+screens give you less control of presentation.
+Setting:
+max-height
+min-height
+max-width
+min width
+gives you more control. But if you give too little height, "overflow" backs up
+into the container and distorts the content.
+*/
+
+body {
+  background-color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navigation li {
+  font-weight: 100;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
+.navigation  li.logo {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+/* DIMENSION in px is non-negotiable, so something set for desktop will overflow mobile*/
+#banner {
+  background-image: url("https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_tahoe.jpeg");
+  background-size: cover;
+  background-position: bottom center;
+  height: 700px;
+  width: 100%;
+}
+/* BORDER RADIUS
+Modify Corners
+div.container {
+border: 3px solid blue;
+border-radius: 5px
+}
+
+Circle Borders: Create an element with same width and height, then set radius to 50%
+div.container {
+height: 60px;
+width: 60px;
+border: 3px solid blue;
+border-radius: 50%
+}*/
+#banner .content h1 {
+  border: 3px solid white;
+  border-radius: 15px;
+  position: relative;
+  top: 50px;
+  width: 400px;
+  margin: 0 auto;
+}
+/*OVERFLOW
+what to do when the content is larger than the container?
+overflow: scroll; adds a new scroll function to scroll the content
+overflow: hidden; hides the excess content
+overflow: visible; displays the content outside the assigned box*/
+#main {
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+  width: 400px;
+  height: 1000px;
+  overflow: scroll;
+}
+
+h1 {
+  color: white;
+  font-size: 42px;
+  font-weight: 600;
+  text-align: center;
+}
+/* BORDER has 3 properties which may be listed in any order. default has #.
+WIDTH:
+1. thin,
+2. #medium,
+3. thick, or
+4. set by px.
+STYLE: (10 types)
+1. #none (low priority),
+2. hidden (hidden priority),
+3. dotted,
+4. dashed,
+5. solid,
+6. double (relies on width set),
+7. groove (looks carved),
+8. ridge (sticks out),
+9. inset (looks embedded), and
+10. outset (looks embossed)
+COLOR:
+1. 160 keywords on the RGB model in the srgb space,
+2. transparent sets color value,
+3. current color,
+4. system-color,
+5. hex codes*/
+h2 {
+  border: 1px dotted red;
+  color: red;
+  font-size: 14px;
+  line-height: 48px;
+  padding: 20px 30px;
+  margin: 30px 20px;
+  text-align: center;
+}
+
+h3 {
+  color: red;
+  font-size: 26px;
+  font-weight: 700;
+  padding: 20px 10px;
+}
+/*MARGIN is the space around the edge after the frame.
+it is common to specify the margin on only one side. Margin shorthand is the same as padding.
+Properties include
+margin-top,
+margin-bottom,
+margin-right, and
+margin-left.
+You can just say margin though, or list the top and bottom at the same time, and the left and right at the same time like this:
+margin: 20px 30px;
+
+MARGIN SHORTHAND
+1 Value: margin: 20px;
+2 Values: margin: bottom&topValue left&rightValue;
+3 Values: margin: topValue left&rightValue bottomValue;
+4 Values: margin: top right bottom left;
+
+MARGIN AUTO
+Can only be set when a width is specified.
+The first number will indicate the margin set for top and bottom.
+Auto means the width of the contents centers within the box.
+
+MARGIN COLLAPSE
+When two boxes are side by side, the space that parts them,
+the side margins, always get added together: 20px on the right box
+plus 20px on the left box = 40px apart.
+The top and bottom margins "collapse", where when there are two boxes
+atop one another, the space between them is the largest of the two
+specified margins. eg the upper box has a margin-bottom of 10px, and the
+lower box has a margin-top of 30px, the separation is not 40px added, nor
+20px added and divided, it's 30px because that was the larger space specified.
+*/
+
+p {
+  color: grey;
+  font-size: 16px;
+  line-height: 48px;
+  margin-top: 60px;
+  padding: 10px 20px;
+}
+
+.pull-quote {
+  margin: 0 auto;
+  width: 350px;
+}
+
+.byline {
+  border-bottom: 1px solid LightGrey;
+  border-top: 1px solid LightGrey;
+  color: DarkGrey;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.share {
+  border: 1px solid LightGrey;
+  padding: 40px 0px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+/*PADDING
+Properties include
+padding-top,
+padding-bottom,
+padding-right, and
+padding-left.
+You can just say padding though, or list the top and bottom at the same time, and the left and right at the same time like this:
+padding: 20px 30px;.
+
+PADDING SHORTHAND
+1 Value: padding: 20px;
+2 Values: padding: bottom&topValue left&rightValue;
+3 Values: padding: topValue left&rightValue bottomValue;
+4 Values: padding: top right bottom left;
+*/
+
+.share a {
+  background: red;
+  border: 1px solid red;
+  border-radius: 3px;
+  padding: 14px;
+  color: white;
+  display: inline-block;
+  margin: 10px;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.share a:hover {
+  background: white;
+  border: 1px solid red;
+  color: red;
+}
