@@ -1,0 +1,48 @@
+body {
+    background-color: #FFF;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #466995;
+    border-bottom: 1px solid #466995;
+    position: absolute;
+    width: 100%;
+}
+
+ul {
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+li {
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.welcome {
+    background-color: #DBE9EE;
+    box-sizing: border-box;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: 200px;
+}
+
+/*POSITION
+1) #static is default,
+2) relative + top, bottom, left, or right offset instructions
+3) absolute also uses offset instructions, and floats to front overlapping the
+   other elements. Displaced.
+4) fixed
+5) sticky*/
+.question {
+    text-align: center;
+    position: relative;
+    top: 40px;
+}
