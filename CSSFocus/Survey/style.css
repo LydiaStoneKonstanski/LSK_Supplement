@@ -24,6 +24,26 @@ li {
     text-transform: uppercase;
 }
 
+li.hover {
+    color: #DBE9EE;
+}
+
+h1 {
+     color: #466995;
+     font-family: 'Oswald', sans-serif;
+     font-size: 32px;
+     font-weight: 300;
+     text-transform: uppercase;
+}
+
+h2 {
+     color: #333;
+     font-family: 'Varela Round', sans-serif;
+     font-size: 26px;
+     font-weight: 100;
+     margin: 0 auto 20px auto;
+}
+
 .welcome {
     background-color: #DBE9EE;
     box-sizing: border-box;
