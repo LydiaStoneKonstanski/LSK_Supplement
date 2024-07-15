@@ -22,6 +22,9 @@ li {
     font-size: 16px;
     font-weight: 300;
     text-transform: uppercase;
+    display: inline-block;
+    width: 80px;
+
 }
 
 li.hover {
@@ -73,6 +76,7 @@ p {
 footer {
     background-color: #DBE9EE;
     text-align: center;
+    height: 100px;
 }
 
 .welcome {
@@ -82,25 +86,58 @@ footer {
     text-align: center;
     width: 100%;
     position: relative;
-    top: 200px;
+    top: 50px;
 }
 
 /*POSITION
 1) #static is default,
-2) relative + top, bottom, left, or right offset instructions
+2) relative + top, bottom, left, or right offset instructions. Relative means relative to
+   the normal position, and then other elements fill the gap.
 3) absolute also uses offset instructions, and floats to front overlapping the
-   other elements. Displaced.
-4) fixed
-5) sticky*/
+   other elements. Displaced. Positioned relative to the nearest ancestor.
+4) fixed. Fixed is relative to the viewport, so you can't scroll away.
+   That element will stay put.
+5) sticky holds a position until it reaches a certain offset, and then
+   you can scroll away. Needs -webkit-sticky for Safari.
+
+
+Z-INDEX
+   position in regards to depth of layering. Must be set to position relative
+   because it doesn't work on static elements. Z-index of 0 is at the back, 1 forward from there, etc.
+
+DISPLAY
+display: inline; only takes the amount of horizontal space that the contents fill. <em> <strong> <a>
+tags for example.
+
+display: block; takes full width of the screen, but does accept height and width.
+
+display: inline-block; allows things to be side- by side, and set height and width.
+
+FLOAT
+Pushes elements all the way to the left or right from static or relative position.
+must specify width. Better done with grid or flexbox.
+
+CLEAR
+Property specifies how things should act when they bump into each other on the page.
+left- the left side won't touch any other element within the same containing element.
+right- the right side won't touch any other element within the same containing element.
+both- neither side will touch any other element within the same containing element.
+none- the element can touch either side.
+   */
+
+
+
 .question {
     text-align: center;
     position: relative;
     top: 40px;
+    clear: left;
 }
 
 .answer {
     border: 1px solid #466995;
     margin: 20px;
+    display: inline-block;
 }
 
 .answer:hover {
