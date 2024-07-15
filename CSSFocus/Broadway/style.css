@@ -8,6 +8,9 @@ header {
     position: fixed;
     top: 0px;
     width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: table;
     z-index: 1;
 }
 
@@ -23,6 +26,7 @@ nav li {
     font-size: 12px;
     display: inline-block;
     width: 80px;
+    padding: 0 50px;
 }
 
 main {
