@@ -101,6 +101,7 @@ footer p {
 .supporting.col {
     font-family: 'Raleway', sans-serif;
     text-align: center;
+    padding-top: 20px 10px;
     display: inline-block;
     width: 200px;
     position: relative;
@@ -134,7 +135,6 @@ footer p {
     letter-spacing: 1.3px;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 10px;
     margin-bottom: 10px;
     border: 2px solid #333333;
 }
@@ -148,5 +148,6 @@ footer p {
 
     .supporting .col {
         width: 100%;
+        padding: 20px;
     }
 }
