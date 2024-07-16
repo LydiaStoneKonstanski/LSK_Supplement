@@ -51,6 +51,27 @@ body {
 
 /* Roast types */
 .green {
+  background-color: #9EB599;
+}
+
+.light {
+  background-color: #683c2c;
+}
+
+.city {
+  background-color: #4c352d;
+}
+
+.vienna {
+  background-color: #352926;
+}
+
+.italian {
+  background-color: #141212;
+}
+
+/* Alternate Roast Types
+.green {
   background-color: darkseagreen;
 }
 
@@ -69,7 +90,7 @@ body {
 .italian {
   background-color: black;
 }
-
+*/
 /*Alternate Roast Colors
 .green {
   background-color: #8FBC8F;
