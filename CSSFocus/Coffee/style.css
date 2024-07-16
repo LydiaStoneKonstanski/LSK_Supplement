@@ -70,9 +70,31 @@ body {
   background-color: black;
 }
 
+/*Alternate Roast Colors
+.green {
+  background-color: #8FBC8F;
+}
+
+.light {
+  background-color: #A0522D;
+}
+
+.city {
+  background-color: #8B4513;
+}
+
+.vienna {
+  background-color: #A52A2A;
+}
+
+.italian {
+  background-color: #000000;
+}*/
+
 /* Typography */
 h1 {
   color: midnightblue;
+  /*background-color: aqua;*/
   font-family: 'Covered By Your Grace', sans-serif;
   font-size: 100px;
   line-height: 76px;
