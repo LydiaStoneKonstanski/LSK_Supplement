@@ -1,0 +1,28 @@
+.block {
+  height: 100px;
+  width: 100px;
+  display: block;
+}
+
+#container{
+  background-color: #F4E8C1;
+ 	position: absolute;
+  height: 550px;
+  width: 100%;
+}
+
+#teal {
+  background-color: #A8D0DB;
+  /*border: 1px solid #F4E8C1;*/
+  height: 100px;
+  /*width: 200px;*/
+  padding: 0px 50px;
+  margin: 100px;
+}
+
+#purple {
+  background-color: #414073;
+  /*height: 200px;*/
+  padding: 50px 50px;
+  margin: 100px 100px 50px 100px;
+}
