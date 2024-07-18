@@ -14,13 +14,48 @@
         <table>
             <!--Header Row-->
             <tr>
-                <th></th>
-                <th></th scope= "col">Html</tr>
-                <th></th scope= "col">CSS</tr>
-                <th></th scope= "col">How It Works
+                <th scope= "col">Selector</th>
+                <th scope= "col">in Html</th>
+                <th scope= "col">Html Example</th>
+                <th scope= "col">in CSS</th>
+                <th scope= "col">CSS Example</th>
+                <th scope= "col">How It Works</th>
             </tr>
-            <tr><td></td></tr>
-            <tr></tr>
+
+            <!--Universal Selector Row-->
+            <tr>
+                <td>Universal</td> <!--Selector Title-->
+                <td><em>none</em></td> <!--Html Notation-->
+                <td><em>none</em></td> <!--Html Example-->
+                <td>*</td> <!--CSS Notation-->
+                <td>* {<br> font-family: Verdana;<br>}</td> <!--CSS Example-->
+                <td>To apply a rule to every site element,<br>
+                    use the universal selector at the top of<br>
+                    the stylesheet.</td> <!--Explanation-->
+            </tr>
+             <!--Type Selector Row-->
+            <tr>
+                <td>Type</td> <!--Selector Title-->
+                <td>[<]tag-goes-here[>]</td> <!--Html Notation-->
+                <td>[<]body[>]</td> <!--Html Example-->
+                <td>tag without [<][>]</td> <!--CSS Notation-->
+                <td>body {<br>}</td> <!--CSS Example-->
+                <td>To select major sections for styling,<br>
+                    use the html type element without prefixes.</td> <!--Explanation-->
+            </tr>
+
+             <!--Class Selector Row-->
+            <tr>
+                <td>Class</td> <!--Selector Title-->
+                <td>[<]class="class-goes-here"[>]</td> <!--Html Notation-->
+                <td>[<]div class="green-box"[>]</td> <!--Html Example-->
+                <td>.class-goes-here</td> <!--CSS Notation-->
+                <td>.green-box {<br>}</td> <!--CSS Example-->
+                <td>To select a class element for styling,<br>
+                    use the contents of the html class element<br>
+                    listed between quotes.</td> <!--Explanation-->
+            </tr>
+
             <tr></tr>
             <tr></tr>
         </table>
