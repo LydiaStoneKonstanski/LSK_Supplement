@@ -72,6 +72,7 @@ html {
   border-bottom: 4px solid #ffb78c;
   font-size: 1.44rem;
   letter-spacing: 2px;
+  font-weight:500;
 }
 
 .banner h1 {
@@ -96,6 +97,7 @@ html {
 
   .banner h1 {
     font-size: 6rem;
+    font-weight: 900;
   }
 }
 
@@ -137,6 +139,7 @@ html {
 .journal p {
   padding-bottom: 2.77rem;
   font-size: 1.5rem;
+  line-height: 1.4;
 }
 
 .journal .first-letter {
@@ -145,6 +148,7 @@ html {
   font-family: "Abril Fatface", serif;
   font-size: 7.44rem;
   color: #10b0d8;
+  line-height: .87;
 }
 
 .quote {
@@ -156,6 +160,7 @@ html {
   text-align: center;
   font-size: 3.55rem;
   font-weight: 800;
+  line-height: 1.2;
 }
 
 @media only screen and (max-width: 680px) {
@@ -181,6 +186,7 @@ footer .content {
   flex-grow: 1;
   font-style: italic;
   color: #9b9b9b;
+  line-height: 1.5;
 }
 
 footer p {
