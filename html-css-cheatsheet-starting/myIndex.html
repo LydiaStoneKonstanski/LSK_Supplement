@@ -52,11 +52,47 @@
                 <td>.class-goes-here</td> <!--CSS Notation-->
                 <td>.green-box {<br>}</td> <!--CSS Example-->
                 <td>To select a class element for styling,<br>
+                    start with a period, then <br>
                     use the contents of the html class element<br>
                     listed between quotes.</td> <!--Explanation-->
             </tr>
 
-            <tr></tr>
+                         <!--Multiple Classes Selector Row-->
+            <tr>
+                <td>Multiple Classes</td> <!--Selector Title-->
+                <td>[<]class="class-goes-here, another-class-goes-here"[>]</td> <!--Html Notation-->
+                <td>[<]div class="green-box, outline-box"[>]</td> <!--Html Example-->
+                <td>.class-goes-here{<br>}<br>.another-class-goes-here{<br>}</td> <!--CSS Notation-->
+                <td>.green-box {<br>} <br> .outline-box {<br>}</td> <!--CSS Example-->
+                <td>For a selector with more than one class, <br>
+                    styling can be done separately by listing <br>
+                    all the classes on their own in the CSS.</td> <!--Explanation-->
+            </tr>
+            <!--id Selector Row-->
+            <tr>
+                <td>ID</td> <!--Selector Title-->
+                <td>[<]id="id-goes-here"[>]</td> <!--Html Notation-->
+                <td>[<]div id="single-element"[>]</td> <!--Html Example-->
+                <td>#id-goes-here</td> <!--CSS Notation-->
+                <td>#single-element {<br>}</td> <!--CSS Example-->
+                 <td>To select an id element for styling,<br>
+                    start with a hashtag, then <br>
+                    use the contents of the html id element<br>
+                    listed between quotes.</td> <!--Explanation-->
+            </tr>
+
+             <!--Attribute Selector Row-->
+            <tr>
+                <td>Attribute</td> <!--Selector Title-->
+                <td>[<]element class="specific-example"[>]</td> <!--Html Notation-->
+                <td>[<]img src="summer"[>]</td> <!--Html Example-->
+                <td>element [class*='specific-example']</td> <!--CSS Notation-->
+                <td>img [src*='summer'] {<br>}</td> <!--CSS Example-->
+                 <td>Attributes can be selected by their characters<br>
+                    by treating it as SQL notation. <br>
+                    Brackets enclose the string to select, and asterisk<br>
+                    indicates "select all".</td> <!--Explanation-->
+            </tr>
             <tr></tr>
         </table>
     </div>
