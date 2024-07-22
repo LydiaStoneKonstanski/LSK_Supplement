@@ -1,46 +1,50 @@
-
-
-/*
-Other Student Work
-
 body {
-  background-color: DarkOrange;
-}
+    background-color: #22a6b3;
+    }
+
 h1 {
-  text-align: center;
-  font-family: "Lucida Console";
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    color: aliceblue;
+    text-transform: uppercase;
 }
+
+h2 {
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    color: #7ed6df;
+}
+
+h3 {
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+
+.italic {
+    font-style: italic;
+}
+
 table {
-  text-align: center;
-  border: 2px solid grey;
-  border-collapse: collapse;
-  background-color: PowderBlue;
-  color: black;
-  font-size: 20px;
+    border: 4px solid aliceblue;
+    color: aliceblue;
 }
-th, td {
-  border: 2px solid green;
-}
+
 th {
-  background-color: green;
-  color: DarkGrey;
-  font-size: 20px;
-  font-family: Georgia
+    text-align: center;
+    font-family: Raleway, sans-serif;
 }
-.itali{
-  font-style: italic;
+
+td {
+    font-family: 'Playfair Display';
+    background-color; #7ed6df;
 }
-span{
-  font-weight: bold;
-  font-size: 22px;
-  color:red;
+
+th, td {
+  border: 2px solid #7ed6df;
 }
-.foot {
-  font-size: 20px;
-  font-family: Georgia;
-  color: blue;
-  text-align: center;
+
+.bold {
+    font-weight: bold;
+    font-family: Raleway, sans-serif;
 }
-.continue {
-  text-align: right;
-}*/

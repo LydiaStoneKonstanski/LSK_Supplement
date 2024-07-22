@@ -3,97 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS External Stylesheet Composition Cheatsheet</title>
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <header>
-    <h1>CSS External Stylesheet Composition Cheatsheet</h1>
+    <h1> Cheatsheet</h1>
+    <h2>CSS External Stylesheet Composition</h2>
 </header>
 <body>
     <div class="select">
-        <h3>Selectors</h3>
+        <h3 class="italic">Selectors</h3>
         <p></p>
         <table>
             <!--Header Row-->
             <tr>
-                <th scope= "col">Selector</th>
-                <th scope= "col">in Html</th>
-                <th scope= "col">Html Example</th>
-                <th scope= "col">in CSS</th>
-                <th scope= "col">CSS Example</th>
-                <th scope= "col">How It Works</th>
+                <th scope= "col"><h3>Selector</h3></th>
+                <th scope= "col"><h3>in Html</h3></th>
+                <th scope= "col"><h3>Html Example</h3></th>
+                <th scope= "col"><h3>in CSS</h3></th>
+                <th scope= "col"><h3>CSS Example</h3></th>
+                <th scope= "col"><h3>How It Works</h3></th>
             </tr>
 
             <!--Universal Selector Row-->
             <tr>
-                <td>Universal</td> <!--Selector Title-->
+                <td class="bold">Universal</td> <!--Selector Title-->
                 <td><em>none</em></td> <!--Html Notation-->
                 <td><em>none</em></td> <!--Html Example-->
                 <td>*</td> <!--CSS Notation-->
                 <td>* {<br> font-family: Verdana;<br>}</td> <!--CSS Example-->
-                <td>To apply a rule to every site element,<br>
-                    use the universal selector at the top of<br>
+                <td>To apply a rule to every site element,
+                    use the universal selector at the top of
                     the stylesheet.</td> <!--Explanation-->
             </tr>
              <!--Type Selector Row-->
             <tr>
-                <td>Type</td> <!--Selector Title-->
+                <td class="bold">Type</td> <!--Selector Title-->
                 <td>[<]tag-goes-here[>]</td> <!--Html Notation-->
                 <td>[<]body[>]</td> <!--Html Example-->
                 <td>tag without [<][>]</td> <!--CSS Notation-->
                 <td>body {<br>}</td> <!--CSS Example-->
-                <td>To select major sections for styling,<br>
+                <td>To select major sections for styling,
                     use the html type element without prefixes.</td> <!--Explanation-->
             </tr>
 
              <!--Class Selector Row-->
             <tr>
-                <td>Class</td> <!--Selector Title-->
+                <td class="bold">Class</td> <!--Selector Title-->
                 <td>[<]class="class-goes-here"[>]</td> <!--Html Notation-->
                 <td>[<]div class="green-box"[>]</td> <!--Html Example-->
                 <td>.class-goes-here</td> <!--CSS Notation-->
                 <td>.green-box {<br>}</td> <!--CSS Example-->
-                <td>To select a class element for styling,<br>
-                    start with a period, then <br>
-                    use the contents of the html class element<br>
-                    listed between quotes.</td> <!--Explanation-->
+                <td>To select a class element for styling,
+                    start with a period, then
+                    use the contents of the html class element
+                    listed between quotes. <!--Explanation-->
             </tr>
 
                          <!--Multiple Classes Selector Row-->
             <tr>
-                <td>Multiple Classes</td> <!--Selector Title-->
+                <td class="bold">Multiple Classes</td> <!--Selector Title-->
                 <td>[<]class="class-goes-here, another-class-goes-here"[>]</td> <!--Html Notation-->
                 <td>[<]div class="green-box, outline-box"[>]</td> <!--Html Example-->
                 <td>.class-goes-here{<br>}<br>.another-class-goes-here{<br>}</td> <!--CSS Notation-->
                 <td>.green-box {<br>} <br> .outline-box {<br>}</td> <!--CSS Example-->
-                <td>For a selector with more than one class, <br>
-                    styling can be done separately by listing <br>
+                <td>For a selector with more than one class,
+                    styling can be done separately by listing
                     all the classes on their own in the CSS.</td> <!--Explanation-->
             </tr>
             <!--id Selector Row-->
             <tr>
-                <td>ID</td> <!--Selector Title-->
+                <td class="bold">ID</td> <!--Selector Title-->
                 <td>[<]id="id-goes-here"[>]</td> <!--Html Notation-->
                 <td>[<]div id="single-element"[>]</td> <!--Html Example-->
                 <td>#id-goes-here</td> <!--CSS Notation-->
                 <td>#single-element {<br>}</td> <!--CSS Example-->
-                 <td>To select an id element for styling,<br>
-                    start with a hashtag, then <br>
-                    use the contents of the html id element<br>
+                 <td>To select an id element for styling,
+                    start with a hashtag, then
+                    use the contents of the html id element
                     listed between quotes.</td> <!--Explanation-->
             </tr>
 
              <!--Attribute Selector Row-->
             <tr>
-                <td>Attribute</td> <!--Selector Title-->
+                <td class="bold">Attribute</td> <!--Selector Title-->
                 <td>[<]element class="specific-example"[>]</td> <!--Html Notation-->
                 <td>[<]img src="summer"[>]</td> <!--Html Example-->
                 <td>element [class*='specific-example']</td> <!--CSS Notation-->
                 <td>img [src*='summer'] {<br>}</td> <!--CSS Example-->
-                 <td>Attributes can be selected by their characters<br>
-                    by treating it as SQL notation. <br>
-                    Brackets enclose the string to select, and asterisk<br>
+                 <td>Attributes can be selected by their characters
+                    by treating it as SQL notation.
+                    Brackets enclose the string to select, and asterisk
                     indicates "select all".</td> <!--Explanation-->
             </tr>
-            <tr></tr>
+
+                         <!--Pseudo Class Selector Row-->
+            <tr>
+                <td class="bold">Pseudo Class</td> <!--Selector Title-->
+                <td>[<]type class="changes-when-you-click"[>]</td> <!--Html Notation-->
+                <td>[<]p class="hover"[>]</td> <!--Html Example-->
+                <td>type:changes-when-you-click</td> <!--CSS Notation-->
+                <td>p:hover {<br>}</td> <!--CSS Example-->
+                 <td>Some elements show up differently before you've interacted with them,
+                 like links you've already followed or buttons you can't click yet. In CSS
+                 these are notated with a colon before them. </td> <!--Explanation-->
+            </tr>
+
+                       <!--Chaining Class Selector Row-->
+            <tr>
+                <td class="bold">Chaining Selectors</td> <!--Selector Title-->
+                <td>[<]type class="specific"[>]</td> <!--Html Notation-->
+                <td>[<]h1 class="green"[>]</td> <!--Html Example-->
+                <td>type.class</td> <!--CSS Notation-->
+                <td>h1.green {<br>}</td> <!--CSS Example-->
+                 <td>Narrows selection to specific type+class. </td> <!--Explanation-->
+            </tr>
+
+                        <!--Descendant Combinator Selector Row-->
+            <tr>
+                <td class="bold">Descendant Combinators</td> <!--Selector Title-->
+                <td>[<]type class="specific"[>]</td> <!--Html Notation-->
+                <td>[<]ul class="main-list"[>]<br>
+                    [<]li>...[<]/li></td> <!--Html Example-->
+                <td>.class specific</td> <!--CSS Notation-->
+                <td>.main-list li {<br>}</td> <!--CSS Example-->
+                 <td>To style child elements, select .class, space, child-element. </td> <!--Explanation-->
+            </tr>
+
+             <!--Multiple Selectors Row-->
+            <tr>
+                <td class="bold">Multiple Selectors</td> <!--Selector Title-->
+                <td>[<]type class="specific"[>]</td> <!--Html Notation-->
+                <td>[<]ul class="main-list"[>]<br>
+                    [<]li>...[<]/li></td> <!--Html Example-->
+                <td>selector, another-selector</td> <!--CSS Notation-->
+                <td>h1, <br> .menu {<br>}</td> <!--CSS Example-->
+                 <td>When more than one element needs to be styled with the same rule, comma separate the elements. </td> <!--Explanation-->
+            </tr>
         </table>
     </div>
 </body>
