@@ -49,3 +49,36 @@
 .breadcrumb a:hover::after {
   border-left-color: blue;
 }
+
+/* Alternate Breadcrumb for Location and Attribute differentiation
+.breadcrumb {
+  text-align: left;
+}
+.breadcrumb li {
+  display: inline;
+}
+.attribute a {
+  color: gray;
+}
+.breadcrumb li.location+li.location::before {
+  color: gray;
+  content: ">";
+}
+.breadcrumb a {
+  display: inline;
+}
+.attribute a::after {
+  content: " x";
+  font-size: 8px;
+  vertical-align: super;
+}
+
+HTML
+    </div>
+    <ul class="breadcrumb">
+      <li class="location"><a href="">...</a></li>
+      <li class="location"><a href="">Hotels</a></li>
+      <li class="attribute"><a href="">Pets</a></li>
+      <li class="attribute"><a href="">Queen Bed</a></li>
+    </ul>
+*/
