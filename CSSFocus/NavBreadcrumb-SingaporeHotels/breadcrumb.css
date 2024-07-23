@@ -1,5 +1,6 @@
 .breadcrumb li{
   display: inline;
+  float: left;
 }
 .breadcrumb li+li::before {
 	padding: 10px;
@@ -8,9 +9,6 @@
 }
 .breadcrumb {
   text-align: left;
-}
-.breadcrumb li {
-  float: left;
 }
 .breadcrumb a {
   color: #fff;
@@ -81,4 +79,59 @@ HTML
       <li class="attribute"><a href="">Pets</a></li>
       <li class="attribute"><a href="">Queen Bed</a></li>
     </ul>
+
+    Secondary Styling BEST
+
+    .breadcrumb {
+  text-align: left;
+}
+
+.breadcrumb a {
+  float: left;
+  color: #fff;
+  background: darkcyan;
+  text-decoration: none;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 15px;
+  padding: 0 5px;
+}
+.breadcrumb .attribute a {
+  background-color: inherit;
+}
+.breadcrumb .location a::before,
+.breadcrumb .location a::after {
+  content: "";
+  position: absolute;
+  border-color: darkcyan;
+  border-style: solid;
+  border-width: 15px 5px;
+}
+
+.breadcrumb .location a::after {
+  left: 100%;
+  border-color: transparent;
+  border-left-color: darkcyan;
+}
+.breadcrumb .location a::before {
+  left: -10px;
+  border-left-color: transparent;
+}
+
+.attribute a{
+  color: gray;
+}
+
+.breadcrumb .location a:hover {
+  background-color: blue;
+}
+.breadcrumb .location a:hover::before {
+  border-color: blue;
+  border-left-color: transparent;
+}
+.breadcrumb .location a:hover::after {
+  border-left-color: blue;
+}
 */
