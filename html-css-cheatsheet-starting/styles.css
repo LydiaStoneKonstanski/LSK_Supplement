@@ -25,6 +25,10 @@ h3 {
     font-style: italic;
 }
 
+.cent {
+    text-align: center;
+}
+
 table {
     border: 4px solid aliceblue;
     color: aliceblue;
