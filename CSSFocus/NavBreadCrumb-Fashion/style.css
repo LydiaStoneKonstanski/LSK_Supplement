@@ -1,0 +1,24 @@
+/*Must be inline*/
+.breadcrumb > li {
+    display: inline;
+}
+
+/* ***The + is called the adjacent sibling combinator;
+it will only select two li‘s when they are immediately next to each other,
+with the same parent. The element that actually gets selected is the second
+element of this sibling pair.
+The ::before part of this selector creates a pseudo-element.
+The ::before pseudo-element is often used with the content property,
+to add content that will be displayed just before the selected element.*/
+.breadcrumb li+li::before {
+	padding: 10px;
+    content: ">";
+}
+
+.breadcrumb a {
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: red;
+}

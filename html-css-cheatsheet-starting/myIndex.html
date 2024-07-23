@@ -176,6 +176,26 @@
                      To style child elements, select .class, space, child-element. </td> <!--Explanation-->
             </tr>
 
+                                <!--Sibling Combinator Selector Row-->
+            <tr>
+                <td
+                        class="bold">Adjacent Sibling Combinator</td> <!--Selector Title-->
+                <td>
+                    <code>&lt; type class="specific"&gt;</code></td> <!--Html Notation-->
+                <td>
+                    <code>&lt; ul class="breadcrumb"&gt;<br>&lt;li>...&lt;/li&gt;</code></td> <!--Html Example-->
+                <td>
+                    <code>.class specific::location</code></td> <!--CSS Notation-->
+                <td>
+                    <code>.breadcrumb li+li::before {<br>content: "/";<br>}</code></td> <!--CSS Example-->
+                 <td>
+                     The + is called the adjacent sibling combinator; it will only select two li‘s when they are immediately next to each other, with the same parent.
+                     The element that actually gets selected is the second element of this sibling pair.
+                     The ::before part of this selector creates a pseudo-element.
+                     The ::before pseudo-element is often used with the content property,
+                     to add content that will be displayed just before the selected element.*/ </td> <!--Explanation-->
+            </tr>
+
              <!--Multiple Selectors Row-->
             <tr>
                 <td
