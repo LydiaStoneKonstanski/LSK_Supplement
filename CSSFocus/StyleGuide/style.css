@@ -1,0 +1,59 @@
+body {
+
+}
+
+header {
+
+}
+
+h1 {
+    font-family: "Nunito Sans", sans-serif;
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    margin-block-end 21.44px;
+    margin-block-start 21.44px;
+    margin-inline-end 0px;
+    margin-inline-start 0px;
+    text-align: center;
+}
+
+h2 {
+   display: block;
+   font-family: "Nunito Sans", sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+   margin-block-end: 19.92px;
+   margin-block-start: 19.92px;
+   margin-inline-end: 0px;
+   margin-inline-start: 0px;
+   text-align: left;
+}
+
+.container {
+    border: 2px solid gray;
+    font-family: ;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.color-container {
+    display: block;
+}
+
+.swatch {
+    margin: 20px, 0px;
+    background-color: ;
+    color: ;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: 0px solid white;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.color-name
+.color-hex
+.color-rgb
+.color-hsl
