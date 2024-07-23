@@ -7,3 +7,33 @@
   color: gray;
   content: ">";
 }
+
+/*ALTERNATE ARROW BREADCRUMB
+.breadcrumb li a::before, .breadcrumb li a::after {
+	content: "";
+	position: absolute;
+	border-color: darkcyan;
+	border-style: solid;
+	border-width: 15px 5px;
+}
+
+.breadcrumb li a::before {
+    left: -10px;
+    border-left-color: transparent;
+}
+
+.breadcrumb li a::after {
+    left: -10px;
+    border-left-color: darkcyan;
+}
+.breadcrumb a:hover {
+  background-color: blue;
+}
+.breadcrumb a:hover::before {
+  border-color: blue;
+  border-left-color: transparent;
+}
+.breadcrumb a:hover::after {
+  border-left-color: blue;
+}
+*/
