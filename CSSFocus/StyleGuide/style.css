@@ -11,10 +11,7 @@ h1 {
     display: block;
     font-size: 32px;
     font-weight: 700;
-    margin-block-end 21.44px;
-    margin-block-start 21.44px;
-    margin-inline-end 0px;
-    margin-inline-start 0px;
+    margin: 21.44px;
     text-align: center;
 }
 
@@ -23,32 +20,28 @@ h2 {
    font-family: "Nunito Sans", sans-serif;
    font-size: 24px;
    font-weight: 700;
-   margin-block-end: 19.92px;
-   margin-block-start: 19.92px;
-   margin-inline-end: 0px;
-   margin-inline-start: 0px;
+   margin: 19.92px;
    text-align: left;
+   text-transform: uppercase;
 }
 
 .container {
+    display: block;
+    height: 450px;
     border: 2px solid gray;
-    font-family: ;
+    font-family: "Nunito Sans", sans-serif;
     margin: 10px 0px;
     padding: 10px;
 }
 
-.color-container {
-    display: block;
-}
+.color-container
 
 .swatch {
     margin: 20px, 0px;
-    background-color: ;
-    color: ;
     display: inline-block;
-    height: 100px;
-    width: 100px;
-    border: 0px solid white;
+    height: 220px;
+    width: 220px;
+    border: 2px solid gray;
     border-radius: 50%;
     text-align: center;
 }
@@ -57,3 +50,28 @@ h2 {
 .color-hex
 .color-rgb
 .color-hsl
+.description
+
+/* Swatch color isn't showing a color, and two through 4 don't have their bullet points
+.swatch.color-one {
+    background-color: rgb(45,93,204);
+    color: rgb(255, 255, 255);
+}
+
+.swatch.color-two {
+    background-color: #d957d9;
+    color: rgb(255, 255, 255);
+}
+
+.swatch.color-three {
+    background-color: #4fe0b0;
+    color: rgb(255, 255, 255);
+}
+
+.swatch.color-four {
+    background-color: #efd9ca;
+    color: rgb(255, 255, 255);
+}
+*/
+
+.font-container
