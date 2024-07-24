@@ -24,7 +24,7 @@ h2 {
    text-transform: uppercase;
 }
 .container {
-    display: inline-block;
+    display: block;
     overflow: scroll;
     width: 100%;
     border: 2px solid gray;
@@ -82,40 +82,52 @@ h2 {
 .font-reg,
 .font-ital,
 
+.font-mini {
+    display: inline-block;
+    padding-left: 10px;
+
+.font-cont {
+    display: block;
+    width: 320px;
+    text-align: left;
+    margin-left: 10px;
+}
 .font-name {
     font-family: ;
-    display: inline-block;
-    width: 320px;
-    margin-left: 19.92px;
+    display: block;
     font-size: 20px;
     text-decoration: underline;
+    margin: 10px;
 }
 .font-reg {
     font-family: ;
+    display: block;
     text-decoration: none;
     font-style: normal;
-}
-.font-bold {
-    font-family: ;
-    font-weight: 700;
+    margin: 8px 0px;
 }
 .font-ital {
+    display: block;
     font-family: ;
     font-style: italic;
     text-decoration: none;
+    margin: 8px 0px;
 }
 
 .font-bold {
-    width: 335px;
-    display: inline-block;
-    box-sizing: border-box;
-    margin-left: 19.92px;
-    }
+    font-family: ;
+    display: block;
+    width: 310px;
+    font-weight: 700;
+    margin: 8px 0px;
+}
 
 .font-alphabet {
+    display: block;
     font-family: ;
     text-decoration: none;
     font-style: normal;
+    margin: 8px 0px;
 }
 
 .f-description {
