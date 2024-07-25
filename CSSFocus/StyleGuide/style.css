@@ -153,7 +153,7 @@ h2 {
 .t-one
 
 .btn-primary {
-    background-color: #4bcffa;
+    background-color: #d957d9;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -186,7 +186,6 @@ h2 {
 }
 .btn:hover {
     opacity: .6;
-    font-size: 25;
 }
 
 
