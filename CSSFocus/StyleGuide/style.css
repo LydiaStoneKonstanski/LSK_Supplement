@@ -153,15 +153,48 @@ h2 {
 .t-one
 
 .btn-primary {
-    background-color: #4BCFFA;
+    background-color: #4bcffa;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
+    font-size: 20px;
     cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: #d957d9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-icon {
+    background-color: #4fe0b0;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-w-icon {
+
+}
+.btn:hover {
+    opacity: .6;
+    font-size: 25;
+}
+
+
 
 /*Not working yet
 .snippet {
     background-color: #808e9b;
     color: #f5f5f5;
 }*/
+
+

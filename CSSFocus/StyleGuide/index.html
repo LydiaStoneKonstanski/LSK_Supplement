@@ -9,6 +9,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -298,26 +300,92 @@
 <section class="container">
 <h2>Button Styling</h2>
 <div class="text-container">
+    <!--Primary Button-->
     <div class="font-mini">
         <div class="font-cont">
             <p>Primary Button</p>
             <button class="btn-primary">Submit</button>
-            <p>HTML: <code class="snippet">&lt button class="btn-primary"&gt Submit &lt/button &gt</code><br>CSS: <code>.btn-primary {
-                            background-color: #4BCFFA;
-                            color: white;
-                            padding: 10px 20px;
-                            border: none;
-                            border-radius: 5px;
-                            cursor: pointer;
+            <p>HTML:</p>
+            <p class="snippet"><code>&ltbutton class="btn-primary"&gt Submit &lt/button&gt</code></p>
+            <p>CSS:</p>
+            <p class="snippet"><code>.btn-primary {<br>
+                            background-color: #4bcffa;<br>
+                            color: white;<br>
+                            padding: 10px 20px;<br>
+                            border: none;<br>
+                            border-radius: 5px;<br>
+                            cursor: pointer;<br>
                         }</code></p>
             <ul class="description">
                 <li><em>The primary button is used in the following circumstance:</em></li>
             </ul>
-
-
-
         </div>
     </div>
+    <!--Secondary Button-->
+    <div class="font-mini">
+        <div class="font-cont">
+            <p>Secondary Button</p>
+            <button class="btn-secondary">Cancel</button>
+            <p>HTML:</p>
+            <p class="snippet"><code>&ltbutton class="btn-secondary"&gt ; Cancel &lt/button&gt</code></p>
+            <p>CSS:</p>
+            <p class="snippet"><code>.btn-secondary {<br>
+                        background-color: #d957d9;<br>
+                        color: white;<br>
+                        padding: 10px 20px;<br>
+                        border: none;<br>
+                        border-radius: 5px;<br>
+                        cursor: pointer;<br>
+                    }</code></p>
+            <ul class="description">
+                <li><em>The secondary button is used in the following circumstance:</em></li>
+            </ul>
+        </div>
+    </div>
+        <!--Icon Button-->
+    <div class="font-mini">
+        <div class="font-cont">
+            <p>Icon Button</p>
+            <button class="btn-icon">
+                <i class="fa fa-search"></i>
+            </button>
+            <p>HTML:</p>
+            <p class="snippet"><code>&ltbutton class="btn-icon"&gt &lti class="fa fa-search"&gt&lt/i&gt&lt/button&gt</code></p>
+            <p>CSS:</p>
+            <p class="snippet"><code>.btn-icon {<br>
+                                background-color: 4fe0b0;<br>
+                                border: none;<br>
+                                color: white;<br>
+                                padding: 12px 16px;<br>
+                                cursor: pointer;<br>
+                                font-size: 20px;<br>
+                                }</code></p>
+            <ul class="description">
+                <li><em>The icon button is used for things like search, close, or settings</em></li>
+            </ul>
+        </div>
+    </div>
+    <!--Icon Button with Words-->
+    <div class="font-mini">
+        <div class="font-cont">
+            <p>Icon Button with Words</p>
+            <button class="btn btn-icon">
+                <i class="fa fa-home"></i>  Home</button>
+            <p>HTML:</p>
+            <p class="snippet"><code>&ltbutton class="btn btn-icon"&gt &lti class="fa fa-home"&gt&lt/i&gt&lt/button&gt</code></p>
+            <p>CSS:</p>
+            <p class="snippet"><code>.btn-icon {<br>
+                                background-color: transparent;<br>
+                                border: none;<br>
+                                cursor: pointer;<br>
+                                font-size: 20px;<br>
+                                }</code></p>
+            <ul class="description">
+                <li><em>The icon button is used for things like search, close, or settings</em></li>
+            </ul>
+        </div>
+    </div>
+
 </div>
 </section>
 
