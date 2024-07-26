@@ -19,6 +19,7 @@ h1 {
 }
 
 /*Sizing*/
+
 .container {
   margin: 0 auto;
 }
@@ -29,10 +30,11 @@ h1 {
 }
 
 .main {
-  background-color: #ffc200;
+    background-color: #ffc200;
 }
 
 /*Header Section*/
+
 .header {
   padding: 30px 0px 40px;
   margin-left: 50px;
@@ -51,6 +53,7 @@ h1 {
 }
 
 /*Jumbotron Section*/
+
 .jumbotron {
   background-color: #fff;
   max-width: 1200px;
@@ -83,10 +86,10 @@ h1 {
 
 /*Expertise Section*/
 .cards {
-  background-color: #ffc200;
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #ffc200;
 }
 
 .col {
