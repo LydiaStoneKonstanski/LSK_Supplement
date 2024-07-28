@@ -4,7 +4,9 @@ body {
     color: seashell;
     background-color: black;
     opacity: 0.9;
-    /*text-align: center;*/
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav {
@@ -18,19 +20,33 @@ nav {
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
-    color: seashell;
-    opacity: 0.9;
+    color: rgba (255 241 231 0.9);
+}
+.nav-container {
+    display: flex;
+    height: 67px;
+    width: 100%;
+    align-items: center;
+    background-color: black;
 }
 .container {
     display: flex;
     width: 100%;
+    padding: 10px;
+    align-items: center;
+    background-color: black;
 }
 .navbar-brand {
-    height: 80px;
-    width: auto;
-    text-align: left;
+    height: 45px;
+    text-align: left;*/
     display: inline-block;
+    opacity: 0.9*/
+}
+.navbar-brand img {
+    height: 45px;
+    width: auto;
     opacity: 0.9
+    text-align: center;
 }
 .prime-nav {
     display: flex;
@@ -41,19 +57,25 @@ nav {
     text-align: right;
     margin-left: auto;
     margin-right: 0;
+    cursor: pointer;
 }
-ul .prime-nav {
-    margin-left: auto;
-    margin-right: 0;
-}
-.prime-nav li {
-cursor: pointer;
-}
+/*.flex-shrink-0 {
+    box-sizing: border-box;
+    display: block;
+    flex-shrink: 0;
+    text-size-adjust: 100%;
+}*/
 header {
-    margin-top: 70px;
-    position: fixed;
+    flex: 2 1 1200px;
+    padding-top: 100px;
+    align-content: center;
+    justify-content: space-around;
 }
-.background {
-    width: 100%;
-    height: auto;
+bg {
+    flex:
+}
+.subtitle {
+}
+.mission {
+    text-align: center;
 }
