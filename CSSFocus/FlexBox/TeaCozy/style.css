@@ -9,11 +9,17 @@ body {
     padding: 0;
 }
 h2 {
+    width: 100%;
     margin: 15px;
-    display: flex;
+    color: rgba(255, 241, 231, 0.9);
+    /*display: flex;
+    text-align: center;*/
 }
 h4 {
+    width: 100%;
     margin: 0px 15px 15px 15px;
+    /*display: flex;
+    text-align: center;*/
 }
 
 nav {
@@ -33,13 +39,6 @@ nav {
     display: flex;
     height: 67px;
     width: 100%;
-    align-items: center;
-    background-color: black;
-}
-.container {
-    display: flex;
-    width: 100%;
-    /*padding: 10px;*/
     align-items: center;
     background-color: black;
 }
@@ -93,4 +92,75 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.tea-of-the-month {
+    width: 100vw;
+    height: 70vw;
+    display: flex;
+    flex: 2 1 1000px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.month {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container {
+    display: inline-flex;
+    width: 1000px;
+    align-items: center;
+    background-color: black;
+}
+.month-pic {
+    height: 200px;
+    width: 300px;
+}
+.subtitle {
+    display: flex;
+}
+.locations-container {
+    width: 100vw;
+    height: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+}
+.center {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.loc-mini {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.bl-bg {
+    background-color: black;
+    height: 300px;
+    width: 300px;
+    line-height: 32em;
+}
+h5 {
+    font-style: normal;
+    font-size: 15px;
+    color: rgba(255, 241, 231, 0.9);
+    text-align: center;
+}
+.copyright {
+    font-size: 12px;
+    text-align: left;
+    color: rgba(255, 241, 231, 0.9);
+    padding-left: 10px;
 }
