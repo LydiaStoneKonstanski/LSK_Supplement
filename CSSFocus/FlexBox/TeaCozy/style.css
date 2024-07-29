@@ -1,12 +1,22 @@
 body {
     font-family: Helvetica, sans-serif;
     font-size: 22px;
-    color: seashell;
+    color: rgba(255, 241, 231, 0.9);
     background-color: black;
     opacity: 0.9;
     text-align: center;
     margin: 0;
     padding: 0;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: space around;*/
+}
+main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 h2 {
     width: 100%;
@@ -65,8 +75,11 @@ nav {
     margin-right: 0;
     cursor: pointer;
 }
+.prime-nav:hover {
+    opacity: 0.5;
+}
 .header-container {
-    width: 100vw;
+    width: 1200px;
     height: 70vw;
     display: flex;
     justify-content: center;
@@ -114,26 +127,29 @@ header {
     width: 1000px;
     align-items: center;
     background-color: black;
+    justify-content: center;
+}
+.subtitle {
+    margin: 15px;
 }
 .month-pic {
     height: 200px;
     width: 300px;
 }
-.subtitle {
-    display: flex;
-}
 .locations-container {
-    width: 100vw;
-    height: 70vw;
+    width: 1200px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg");
+    background-size: 115%
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 20px;
+    margin: 0 10;
 }
 .center {
     display: flex;
@@ -148,9 +164,10 @@ header {
 }
 .bl-bg {
     background-color: black;
+    color: rgba(255, 241, 231, 0.9);
     height: 300px;
     width: 300px;
-    line-height: 32em;
+    line-height: 250%;
 }
 h5 {
     font-style: normal;
