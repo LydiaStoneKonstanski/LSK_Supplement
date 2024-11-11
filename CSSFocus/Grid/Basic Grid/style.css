@@ -1,8 +1,24 @@
 .grid {
   border: 2px blue solid;
-  width: 400px;
+  /*width: 400px; Property minmax() Doesn't work when width is declared*/
   height: 500px;
-  display: grid;
+  display: grid; /*without this, the boxes display very small. Once it's in place, they divide equally.*/
+
+  /*grid-template-columns: 100px 50% 200px; /* This makes the individual grids exceed the overall size*/
+  /*grid-template-columns: 100px 200px; Sets size by px*/
+  /*grid-template-columns: 20% 50%; Sets size by percent*/
+  /*grid-template-columns: 20px 40% 60px; Sets size mix and match*/
+
+  /*grid-template-rows: 40% 50% 50px; Can also be percent, px, or both.*/
+
+  /*grid-template: 40% 50% 50px / 100px 50% 200px; /* rows / columns*/*/
+
+  /*grid-template: 1fr 1fr 1fr / 3fr 50% 1fr; Each row takes 1/3 of the available space. The center column takes 50% of the space, then the first column takes 3/4 of the remainder, and the last column occupies 1/4 of the remainder.*/
+  /*grid-template: repeat(3, 1fr) / 3fr 50% 1fr; Function repeat() establishes number of rows*/
+  grid-template: repeat(3, 1fr) / 3fr minmax(50px, 300px) 1fr; /*Function minmax() establishes limits on variable sizing.*/
+  /*row-gap: 20px;
+  column-gap: 5px;*/
+  gap: 20px 5px;
 }
 
 .box {
