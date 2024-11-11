@@ -18,18 +18,14 @@ main {
 }
 h2 {
     width: 100%;
-    margin: 15px;
     color: rgba(255, 241, 231, 0.9);
-    /*display: flex;
-    text-align: center;*/
+    text-align: center;
 }
 h4 {
     width: 100%;
     margin: 0px 15px 15px 15px;
-    /*display: flex;
-    text-align: center;*/
+    text-align: center;
 }
-
 nav {
     height: 69px;
     width: 100%;
@@ -101,21 +97,20 @@ header {
     align-items: center;
     justify-content: center;
 }
-.tea-of-the-month {
-    width: 100vw;
-    height: auto;
-    display: flex;
-    flex: 2 1 1000px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 .month {
     display: flex;
     width: 100vw;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.tea-of-the-month {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    padding: 15 0px;
+    gap: 20px;
 }
 .container {
     display: inline-flex;
@@ -150,7 +145,6 @@ header {
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-bottom: 20px;
 }
 .loc-mini {
     display: flex;
