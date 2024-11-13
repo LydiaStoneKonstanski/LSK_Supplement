@@ -12,6 +12,10 @@ main {
   margin-top: 44px;
   justify-items: center; /*Positions grid inside columns. Accepts start, end, center, and stretch.*/
   justify-content: center; /*Positions whole grid inside parent element. Accepts start, end, center, stretch, space-around, space-between, and space-evenly.*/
+  /*align-items: start;*/
+  /*align-items: end;*/
+  /*align-items: center;*/
+  align-items: stretch; /*Positions items along the axis of the columns up and down, so start cleaves to the top, end to the bottom, center to the middle, and stretch along the entire column.*/
 }
 
 h2 {
