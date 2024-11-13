@@ -10,12 +10,14 @@ main {
   grid-template-rows: repeat(3, 450px);
   gap: 20px;
   margin-top: 44px;
-  justify-items: center; /*Positions grid inside columns. Accepts start, end, center, and stretch.*/
-  justify-content: center; /*Positions whole grid inside parent element. Accepts start, end, center, stretch, space-around, space-between, and space-evenly.*/
+  /*height: 1600px;/*leaves extra space unless align content is adjusted*/
+  justify-items: center; /*Positions items WITHIN THEIR GRID from left to right on the row axis. Accepts start, end, center, and stretch.*/
+  justify-content: center; /*Positions WHOLE GRID inside parent element left to right. Accepts start, end, center, stretch, space-around, space-between, and space-evenly.*/
   /*align-items: start;*/
   /*align-items: end;*/
   /*align-items: center;*/
-  align-items: stretch; /*Positions items along the axis of the columns up and down, so start cleaves to the top, end to the bottom, center to the middle, and stretch along the entire column.*/
+  align-items: stretch; /*Positions items along the column axis WITHIN THEIR GRID up and down, so start cleaves to the top, end to the bottom, center to the middle, and stretch along the entire column.*/
+  align-content: center; /*Positions WHOLE GRID from top to bottom within the parent container. Accepts start, center, end, stretch, space-around, space-between, and space-evenly.
 }
 
 h2 {
