@@ -9,17 +9,21 @@ body {
 }
 
 .image-container {
-
+   overflow: hidden;
 }
 
 .image-container img {
-
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Banner Section */
 
 #banner {
-
+  height: 46rem;
+  margin-top: 12.5%;
+  margin-bottom: 7.5%;
   background-image: url('camel-background.png');
   background-position: center;
 
@@ -89,10 +93,15 @@ body {
     width: 100%;
 }
 
+p {
+  min-width: 200px;
+  min-height: 200px;
+}
+
 /* Blog Images */
 
 .images {
-
+    margin-bottom: 20%;
 }
 
 .images .image-container {
