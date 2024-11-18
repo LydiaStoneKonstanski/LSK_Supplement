@@ -17,7 +17,9 @@ main {
   /*align-items: end;*/
   /*align-items: center;*/
   align-items: stretch; /*Positions items along the column axis WITHIN THEIR GRID up and down, so start cleaves to the top, end to the bottom, center to the middle, and stretch along the entire column.*/
-  align-content: center; /*Positions WHOLE GRID from top to bottom within the parent container. Accepts start, center, end, stretch, space-around, space-between, and space-evenly.
+  align-content: center; /*Positions WHOLE GRID from top to bottom within the parent container. Accepts start, center, end, stretch, space-around, space-between, and space-evenly.*/
+  grid-auto-rows: 500px;
+  grid-auto-flow: column;
 }
 
 h2 {
