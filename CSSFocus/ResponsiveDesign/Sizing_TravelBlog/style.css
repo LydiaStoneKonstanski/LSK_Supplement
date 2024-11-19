@@ -26,8 +26,8 @@ body {
   margin-bottom: 7.5%;
   background-image: url('camel-background.png');
   background-position: center;
-
-  background-repeat: no-repeat;
+  background-size: cover; /*Cover without margin, etc.*/
+  background-repeat: no-repeat; /* Default is repeat*/
   display: flex;
   justify-content: center;
   align-items: center;
