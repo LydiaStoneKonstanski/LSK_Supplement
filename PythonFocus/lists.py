@@ -366,6 +366,36 @@ pizza_and_prices.insert(-2, [2.5, "peppers"])
 three_cheapest = pizza_and_prices[0:3]
 print(three_cheapest)
 
+'''zip() Makes Lists into Tuples'''
+names = ["Jenny", "Alexus", "Sam", "Grace"]
+heights = [61, 70, 67, 64]
+names_and_heights = zip(names, heights)
+#print(names_and_heights) #Output: <zip object at 0x7f1631e86b48>
+converted_list = list(names_and_heights)
+print(converted_list)#[('Jenny', 61), ('Alexus', 70), ('Sam', 67), ('Grace', 64)]
 
 
+owners = ["Jenny", "Alexus", "Sam", "Grace"]
+dogs_names = ["Elphonse", "Dr. Doggy DDS", "Carter", "Ralph"]
+names_and_dogs_names = zip(owners, dogs_names)
 
+list_of_names_and_dogs_names = list(names_and_dogs_names)
+print(list_of_names_and_dogs_names)
+
+'''Tuples'''
+
+my_tuple = ('abc', 123, 'def', 456, 789, 'ghi')
+
+print(my_tuple[0])
+print(my_tuple[3:5])
+
+print(len(my_tuple))
+
+print(my_tuple.index('abc'))
+print(my_tuple.index(789))
+
+#print(max(my_tuple)) #Error because it must be all one type
+
+#print(min(my_tuple)) #Error because it must be all one type
+
+print(my_tuple.count('ghi'))
