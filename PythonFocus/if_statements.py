@@ -119,3 +119,6 @@ elif planet == 6:
 
 print("Codey's weight is: ", weight)
 
+
+
+
