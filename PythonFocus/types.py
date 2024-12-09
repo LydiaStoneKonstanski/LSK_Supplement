@@ -25,7 +25,7 @@ class Musician:
 drummer = Musician()
 print(drummer.title)
 # prints "Rockstar"
- '''OR'''
+ #OR
 class Grade:
   minimum_passing = 65
 
@@ -113,5 +113,45 @@ class Circle:
 
 # Create a circle teaching_table with diameter 36
 teaching_table = Circle(36)
+
+
+class Student():
+
+    def __init__(self, name, year):
+        self.name = name
+        self.year = year
+        self.grades = []
+
+    def __repr__(self):
+        return self.name
+
+    def add_grade(self, grade):
+        if type(grade) is Grade:
+            self.grades.append(grade)
+        else:
+            pass
+
+
+roger = Student('Roger van der Weyden', 10)
+sandro = Student('Sandro Botticelli', 12)
+pieter = Student('Pieter Bruegel the Elder', 8)
+
+
+# print(roger, sandro, pieter)
+
+class Grade():
+    minimum_passing = 65
+
+    def __init__(self, score):
+        self.score = score
+
+    def is_passing(self, grade):
+        if grade >= 65:
+            print("Student is passing!")
+        else:
+            print("Study harder")
+
+
+pieter.add_grade(Grade(100))
 
 

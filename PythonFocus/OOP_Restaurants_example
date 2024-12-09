@@ -1,0 +1,100 @@
+from datetime import datetime
+
+class Menu:
+    def __init__(self, name, items, start_time, end_time):
+        self.name = name
+        self.items = items
+        self.start_time = start_time
+        self.end_time = end_time
+
+    def __repr__(self):
+        return f'The {self.name} menu is available from {self.start_time} to {self.end_time}.'
+
+    def calculate_bill(self, purchased_items):
+        return sum(self.items[item] for item in purchased_items if item in self.items)
+
+# Menu Items
+brunch_items = {
+    'pancakes': 7.50, 'waffles': 9.00, 'burger': 11.00, 'home fries': 4.50,
+    'coffee': 1.50, 'espresso': 3.00, 'tea': 1.00, 'mimosa': 10.50, 'orange juice': 3.50
+}
+early_bird_items = {
+    'salumeria plate': 8.00, 'salad and breadsticks (serves 2, no refills)': 14.00,
+    'pizza with quattro formaggi': 9.00, 'duck ragu': 17.50,
+    'mushroom ravioli (vegan)': 13.50, 'coffee': 1.50, 'espresso': 3.00
+}
+dinner_items = {
+    'crostini with eggplant caponata': 13.00, 'caesar salad': 16.00,
+    'pizza with quattro formaggi': 11.00, 'duck ragu': 19.50,
+    'mushroom ravioli (vegan)': 13.50, 'coffee': 2.00, 'espresso': 3.00
+}
+kids_items = {
+    'chicken nuggets': 6.50, 'fusilli with wild mushrooms': 12.00, 'apple juice': 3.00
+}
+
+#Menus
+brunch = Menu('Brunch', brunch_items, '11:00AM', '4:00PM')
+early_bird = Menu('Early Bird', early_bird_items, '3:00PM', '6:00PM')
+dinner = Menu('Dinner', dinner_items, '5:00PM', '11:00PM')
+kids = Menu('Kids', kids_items, '11:00AM', '9:00PM')
+
+# Franchise Class
+class Franchise:
+    def __init__(self, address, menus: list):
+        self.address = address
+        self.menus = menus
+
+    def __repr__(self):
+        return f'The store you are looking for is located at {self.address}.'
+
+    def available_menus(self, time):
+        given_time = datetime.strptime(time, '%I:%M%p')
+        available = []
+
+        for menu in self.menus:
+            start_time = datetime.strptime(menu.start_time, '%I:%M%p')
+            end_time = datetime.strptime(menu.end_time, '%I:%M%p')
+
+            if start_time <= given_time <= end_time:
+                available.append(menu)
+
+        return available
+
+#Basta Franchises
+basta_location1 = "1232 West End Road"
+basta_location2 = "12 East Mulberry Street"
+basta_menus = [brunch, early_bird, dinner, kids]
+
+flagship_store = Franchise(basta_location1, basta_menus)
+new_installment = Franchise(basta_location2, basta_menus)
+
+print(flagship_store)
+print(new_installment)
+
+# Test available_menus
+print(flagship_store.available_menus('2:00PM'))  # Should return [Brunch, Kids]
+print(flagship_store.available_menus('5:30PM'))  # Should return [Dinner, Kids]
+# print(new_location)
+#print(flagship_store.available_menus('12:00PM')) #Output: [The Brunch menu is available from 11:00AM to 4:00PM., The Kids menu is available from 11:00AM to 9:00PM.]
+#print(new_installment.available_menus('5:30PM')) #Output: [The Early Bird menu is available from 3:00PM to 6:00PM., The Kids menu is available from 11:00AM to 9:00PM.]
+
+class Business:
+  def __init__(self, name: str, franchises: list):
+    self.name = name
+    self.franchises = franchises
+basta_name = "Basta Fazoolin' with my Heart"
+basta_franchises = [flagship_store, new_installment]
+
+basta = Business(basta_name, basta_franchises)
+
+arepas_items = {
+  'arepa pabellon': 7.00, 'pernil arepa': 8.50, 'guayanes arepa': 8.00, 'jamon arepa': 7.50
+}
+
+arepas_menu = Menu('Arepas Menu', arepas_items, '10:00AM', '8:00PM')
+arepas_location1 = '189 Fitzgerald Ave'
+arepas_place = Franchise(arepas_location1, arepas_menu)
+arepas_name = "Take a' Arepa"
+arepas = Business(arepas_name, arepas_place)
+
+#print(arepas.franchises.menus) #"The Arepas Menu menu is available from 10:00AM to 8:00PM."
