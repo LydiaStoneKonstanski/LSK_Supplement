@@ -1,3 +1,5 @@
+'''Save this in the Projects folder, navigate there in terminal, type in "jupyter notebook",
+and it opens on Google in a jupyter notebook'''
 #Create an empty list called gamers.
 # This will be your list of people who are attending game night.
 gamers = []
