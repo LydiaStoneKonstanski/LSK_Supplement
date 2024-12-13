@@ -177,3 +177,19 @@ def password_generator(user_name):
     return password
 
 print(password_generator(username_generator("Abe", "Simpson")))
+
+# good_fruit = "Raspberry"
+# print(good_fruit[3])
+
+# cool_fruit = "watermelon"
+# print(cool_fruit[len(cool_fruit) - 2])
+
+# least_favorite_fruit = "cantaloupe"
+# print(least_favorite_fruit[5:8])
+
+def print_some_characters(word):
+  for i in range(len(word)):
+    if i % 2 == 0:
+      print(word[i])
+
+print_some_characters("watermelon")#Output w t r e o
