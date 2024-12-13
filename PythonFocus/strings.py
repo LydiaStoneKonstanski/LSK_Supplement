@@ -85,3 +85,95 @@ company_motto = "Copeland's Corporate Company helps you capably cope with the co
 
 second_to_last = company_motto[-2] #Output: f
 final_word = company_motto[-4:] #Output: life
+
+first_name = "Bob"
+last_name = "Daily"
+
+#first_name[0] = "R" #1263457
+first_name = "Bob"
+last_name = "Daily"
+
+#first_name[0] = "R"
+'''
+Output:
+Traceback (most recent call last):
+  File "/home/ccuser/workspace/introduction-to-strings-immutable-strings/script.py", line 4, in <module>
+    first_name[0] = "R"
+    ~~~~~~~~~~^^^
+TypeError: 'str' object does not support item assignment
+'''
+fixed_first_name = 'R' + first_name[1:]
+print(fixed_first_name)
+
+'''Escaping characters'''
+
+#This messes up the string:
+#favorite_fruit_conversation = "He said, "blueberries are my favorite!""
+
+#the \ fixes it
+favorite_fruit_conversation = "He said, \"blueberries are my favorite!\""
+
+password = "theycallme\"crazy\"91"
+
+def print_each_letter(word):
+  for letter in word:
+    print(letter)
+
+favorite_color = "blue"
+print_each_letter(favorite_color)
+# => 'b'
+# => 'l'
+# => 'u'
+# => 'e'
+
+def get_length(word):
+  char = 0
+  for letter in word:
+    char += 1
+  return char
+
+'''Counting things'''
+favorite_fruit = "blueberry"
+counter = 0
+for character in favorite_fruit:
+  if character == "b":
+    counter = counter + 1
+print(counter)
+
+def letter_check(word, letter):
+  count = 0
+  for i in word:
+    if i == letter:
+      return True
+
+  return False
+
+
+def contains(big_string, little_string):
+  return (little_string in big_string)
+
+
+def common_letters(string_one, string_two):
+  common = []
+  for i in string_one:
+    if (i in string_two) and not (i in common):
+      common.append(i)
+  return common
+
+
+def username_generator(first_name, last_name):
+  username = first_name[:3] + last_name[:4]
+  return username
+print(username_generator("Abe", "Simpson"))
+
+def password_generator(user_name):
+#   password = user_name[-1]
+#   password += user_name[:6]
+#   return password
+
+    password = ""
+    for i in range(0, len(user_name)):
+        password += user_name[i-1]
+    return password
+
+print(password_generator(username_generator("Abe", "Simpson")))
