@@ -112,18 +112,18 @@ If the file name exists already 'w' will overwrite the file.
 #   for item in big_list:
 #     output_writer.writerow(item)
 
-# import csv
-#
-# access_log = [{'time': '08:39:37', 'limit': 844404, 'address': '1.227.124.181'}, {'time': '13:13:35', 'limit': 543871, 'address': '198.51.139.193'}, {'time': '19:40:45', 'limit': 3021, 'address': '172.1.254.208'}, {'time': '18:57:16', 'limit': 67031769, 'address': '172.58.247.219'}, {'time': '21:17:13', 'limit': 9083, 'address': '124.144.20.113'}, {'time': '23:34:17', 'limit': 65913, 'address': '203.236.149.220'}, {'time': '13:58:05', 'limit': 1541474, 'address': '192.52.206.76'}, {'time': '10:52:00', 'limit': 11465607, 'address': '104.47.149.93'}, {'time': '14:56:12', 'limit': 109, 'address': '192.31.185.7'}, {'time': '18:56:35', 'limit': 6207, 'address': '2.228.164.197'}]
-#
-# fields = ['time', 'address', 'limit']
-#
-# with open('logger.csv', 'w') as logger_csv:
-#   log_writer = csv.DictWriter(logger_csv, fieldnames=fields)
-#
-#   log_writer.writeheader()
-#   for item in access_log:
-#     log_writer.writerow(item)
+import csv
+
+access_log = [{'time': '08:39:37', 'limit': 844404, 'address': '1.227.124.181'}, {'time': '13:13:35', 'limit': 543871, 'address': '198.51.139.193'}, {'time': '19:40:45', 'limit': 3021, 'address': '172.1.254.208'}, {'time': '18:57:16', 'limit': 67031769, 'address': '172.58.247.219'}, {'time': '21:17:13', 'limit': 9083, 'address': '124.144.20.113'}, {'time': '23:34:17', 'limit': 65913, 'address': '203.236.149.220'}, {'time': '13:58:05', 'limit': 1541474, 'address': '192.52.206.76'}, {'time': '10:52:00', 'limit': 11465607, 'address': '104.47.149.93'}, {'time': '14:56:12', 'limit': 109, 'address': '192.31.185.7'}, {'time': '18:56:35', 'limit': 6207, 'address': '2.228.164.197'}]
+
+fields = ['time', 'address', 'limit']
+
+with open('logger.csv', 'w') as logger_csv:
+  log_writer = csv.DictWriter(logger_csv, fieldnames=fields)
+
+  log_writer.writeheader()
+  for item in access_log:
+    log_writer.writerow(item)
 
 '''Reading in a JSON file'''
 
@@ -146,5 +146,67 @@ If the file name exists already 'w' will overwrite the file.
 #
 # with open('output.json', 'w') as json_file:
 #   json.dump(turn_to_json, json_file)
+
+
+# import json
+#
+# data_payload = [
+#   {'interesting message': 'What is JSON? A web application\'s little pile of secrets.',
+#    'follow up': 'But enough talk!'}
+# ]
+#
+# with open('data.json', 'w') as data_json:
+#   json.dump(data_payload, data_json)
+
+
+Your code is mostly on the right track but has some issues to address for functionality and clarity. Here are the necessary fixes and adjustments:
+
+
+import csv
+import json
+
+compromised_users = []
+fields = ['Username']
+
+#Read usernames from passwords.csv
+with open('passwords.csv', newline='') as password_file:
+    password_csv = csv.DictReader(password_file)
+    for line in password_csv:
+        compromised_users.append(line['Username'])
+
+#Log compromised usernames to passwords.txt
+with open('passwords.txt', 'w') as compromised_user_file:
+    compromised_user_file.write("Compromised Usernames:\n")
+    for username in compromised_users:
+        compromised_user_file.write(f"{username}\n")
+
+#Notify the boss via JSON
+with open('boss_message.json', 'w') as boss_message:
+    boss_message_dict = {"recipient": "The Boss", "message": "Mission Success"}
+    json.dump(boss_message_dict, boss_message)
+
+#Scramble passwords in new_passwords.csv with slash null signature
+slash_null_sig = """_  _     ___   __  ____             
+/ )( \   / __) /  \(_  _)            
+) \/ (  ( (_ \(  O ) )(              
+\____/   \___/ \__/ (__)             
+ _  _   __    ___  __ _  ____  ____  
+/ )( \ / _\  / __)(  / )(  __)(    \ 
+) __ (/    \( (__  )  (  ) _)  ) D ( 
+\_)(_/\_/\_/ \___)(__\_)(____)(____/ 
+        ____  __     __   ____  _  _ 
+ ___   / ___)(  )   / _\ / ___)/ )( \
+(___)  \___ \/ (_/\/    \\___ \) __ (
+       (____/\____/\_/\_/(____/\_)(_/
+ __ _  _  _  __    __                
+(  ( \/ )( \(  )  (  )               
+/    /) \/ (/ (_/\/ (_/\             
+\_)__)\____/\____/\____/
+"""
+with open('new_passwords.csv', 'w') as new_passwords_obj:
+    new_passwords_obj.write(slash_null_sig)
+
+
+
 
 
