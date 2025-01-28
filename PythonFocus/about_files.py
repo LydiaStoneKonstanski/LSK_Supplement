@@ -158,10 +158,6 @@ with open('logger.csv', 'w') as logger_csv:
 # with open('data.json', 'w') as data_json:
 #   json.dump(data_payload, data_json)
 
-
-Your code is mostly on the right track but has some issues to address for functionality and clarity. Here are the necessary fixes and adjustments:
-
-
 import csv
 import json
 
