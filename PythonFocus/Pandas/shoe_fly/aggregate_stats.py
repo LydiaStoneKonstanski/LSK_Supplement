@@ -24,6 +24,8 @@
 #
 # cheap_shoes = orders.groupby('shoe_color').price.apply(lambda x: np.percentile(x, 25)).reset_index()
 # print(cheap_shoes)
+# shoe_counts = orders.groupby(['shoe_type', 'shoe_color'])['id'].count().reset_index()
+# print(shoe_counts)
 
 
 # df = pd.read_csv('shoefly_page_visits.csv')

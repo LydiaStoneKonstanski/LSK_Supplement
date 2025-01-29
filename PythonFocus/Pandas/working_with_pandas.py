@@ -1,6 +1,6 @@
 # Before we analyze anything, we need to import pandas
 # and load our data
-import pandas as pd
+# import pandas as pd
 import string
 
 # df = pd.read_csv('shoefly_messy_orders.csv')
@@ -174,7 +174,7 @@ orders['salutation'] = orders.apply(lambda row:'Dear Mr. ' + row['last_name'] if
 #
 # product_request = staten_island[['product_description', 'price']]
 # # print(product_request)
- '''Uses multiple filtering options at once'''
+#  '''Uses multiple filtering options at once'''
 # seed_request = inventory.loc[(inventory.location == 'Brooklyn') & (inventory.product_type == 'seeds')]
 # # print(seed_request)
 #
@@ -188,3 +188,122 @@ orders['salutation'] = orders.apply(lambda row:'Dear Mr. ' + row['last_name'] if
 #
 # inventory['full-description']= inventory.apply(combine_lambda, axis=1)
 # print(inventory.head(10))
+
+'''PIVOT TABLES'''
+# orders = pd.read_csv('orders.csv')
+# print(orders.head())
+#
+# shoe_counts = orders.groupby(['shoe_type', 'shoe_color']).id.count().reset_index()
+#
+# shoe_counts_pivot = shoe_counts.pivot(columns='shoe_color', index='shoe_type', values='id').reset_index()
+# print(shoe_counts_pivot)
+
+# import codecademylib3
+# import pandas as pd
+#
+# user_visits = pd.read_csv('page_visits.csv')
+#
+# print(user_visits.head())
+#
+# click_source = user_visits.groupby('utm_source').id.count().reset_index()
+# # print(click_source)
+#
+# click_source_by_month = user_visits.groupby(['utm_source', 'month']).id.count().reset_index()
+# # print(click_source_by_month)
+#
+# click_source_by_month_pivot = click_source_by_month.pivot(columns='month', index='utm_source', values='id').reset_index()
+# print(click_source_by_month_pivot)
+
+'''AB Testing Project. Not sure if it is right'''
+# import codecademylib3
+# import pandas as pd
+#
+# ad_clicks = pd.read_csv('ad_clicks.csv')
+# # print(ad_clicks.head())
+#
+# source = ad_clicks.groupby('utm_source').user_id.count().reset_index()
+# #print(source)
+#
+# ad_clicks['is_click'] = ad_clicks.ad_click_timestamp.apply(lambda x: True if pd.notna(x) else False)
+# #print(ad_clicks.head())
+#
+# clicks_by_source = ad_clicks.groupby(['utm_source', 'is_click'])['user_id'].count().reset_index()
+# # print(clicks_by_source)
+#
+# clicks_pivot= clicks_by_source.pivot(
+#   columns='is_click',
+#   index='utm_source',
+#   values='user_id'
+# ).reset_index()
+# # print(clicks_pivot)
+#
+# clicks_pivot['percent_clicked'] = clicks_pivot[True]/(clicks_pivot[True] + clicks_pivot[False])
+# #print(clicks_pivot)
+#
+# # group_counts = ad_clicks[ad_clicks.experimental_group == 'A'].count()
+#
+# group_counts = ad_clicks.groupby('experimental_group')['user_id'].count().reset_index()
+# #print(group_counts)
+#
+# which_ad = ad_clicks.groupby(['experimental_group','is_click'])['user_id'].count().reset_index()
+# #print(which_ad)
+#
+# which_ad_pivot = which_ad.pivot(
+#   columns='experimental_group',
+#   index='user_id',
+#   values='is_click'
+# ).reset_index()
+# #print(which_ad_pivot)
+#
+# total_users = ad_clicks.user_id.nunique() #1654
+#
+# users_a = ad_clicks.loc[(ad_clicks['is_click'] == True) & (ad_clicks['experimental_group'] == 'A')].reset_index(drop=True)
+# #print(users_a.head())
+#
+# users_b = ad_clicks.loc[(ad_clicks['is_click'] == True) & (ad_clicks['experimental_group'] == 'B')].reset_index(drop=True)
+#
+# #print(users_b.head())
+#
+# percent_users_a = users_a.count()/total_users
+# # print(percent_users_a) #0.18742442563482467
+#
+# percent_users_b = users_b.count()/total_users
+# # print(percent_users_b) #0.15417170495767835
+#
+# # users_a['percent_clicks']=users_a.groupby(['is_click',
+# #   'day'])['user_id'].reset_index()
+# # print(users_a.head())
+#
+# users_a['percent_clicks'] = (
+#     users_a.groupby('day')['user_id'].transform(lambda x: x.count() / users_a['user_id'].count())
+# )
+# users_a_pivot= users_a.pivot(
+#   columns = 'day',
+#   index='user_id',
+#   values='percent_clicks'
+# )
+# print(users_a_pivot)
+#
+# users_b['percent_clicks'] = (
+#     users_b.groupby('day')['user_id'].transform(lambda x: x.count() / users_b['user_id'].count())
+# )
+#
+# users_b_pivot= users_b.pivot(
+#   columns = 'day',
+#   index='user_id',
+#   values='percent_clicks'
+# )
+# print(users_b_pivot)
+
+# sales = pd.read_csv('sales.csv')
+# print(sales)
+# targets = pd.read_csv('targets.csv')
+# print(targets)
+# men_women = pd.read_csv('men_women_sales.csv')
+# print(men_women)
+#
+# all_data = sales.merge(targets).merge(men_women)
+# print(all_data)
+## searching for several things:
+# results = all_data.loc[(all_data.revenue > all_data.target)&(all_data.women > all_data.men)]
+# print(results)
