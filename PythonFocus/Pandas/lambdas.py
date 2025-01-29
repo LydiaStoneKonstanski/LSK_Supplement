@@ -85,4 +85,29 @@ add_random = lambda num : num + random.randint(1, 10)
 print(add_random(5)) #10
 print(add_random(100)) #105
 
+stringlambda = lambda x: x.lower()
+print(stringlambda("Oh Hi Mark!")) #'oh hi mark!'
+
+#First and last initials of a string
+mylambda = lambda str : str[0] + str[-1]
+print(mylambda('This is a string')) #Tg
+
+#Comparitive Functions
+def myfunction(x):
+    if x > 40:
+        return 40 + (x - 40) * 1.50
+    else:
+        return x
+#vs
+myfunction = lambda x: 40 + (x - 40) * 1.50 if x > 40 else x
+
+
+mylambda = lambda n : 'Welcome to Battle City!' if n >= 13 else 'You must be 13 or older'
+print(mylambda(14))
+
+#Lambda to split
+df['Email Provider'] = df.Email.apply(
+    lambda x: x.split('@')[-1]
+    )
+
 
