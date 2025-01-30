@@ -369,3 +369,83 @@ orders['salutation'] = orders.apply(lambda row:'Dear Mr. ' + row['last_name'] if
 #
 # menu = pd.concat([bakery, ice_cream])
 # print(menu)
+
+'''OPERATING ON AN EXISTING COLUMN without .APPLY()'''
+
+# visits = pd.read_csv('visits.csv',
+#                         parse_dates=[1])
+# checkouts = pd.read_csv('checkouts.csv',
+#                         parse_dates=[1])
+#
+# # Part 1: print to inspect each DataFrame
+# print(visits.head(10))
+# print(checkouts.head(10))
+#
+# # Part 2: merge visits and checkouts
+# v_to_c = pd.merge(visits, checkouts)
+#
+# # Part 3: define the column time to be the different between checkout time and visit time
+# v_to_c['time'] = v_to_c.checkout_time - v_to_c.visit_time
+#
+# print(v_to_c.time.mean())
+
+'''Funnel stats'''
+
+# visits = pd.read_csv('visits.csv',
+#                      parse_dates=[1])
+# cart = pd.read_csv('cart.csv',
+#                    parse_dates=[1])
+# checkout = pd.read_csv('checkout.csv',
+#                        parse_dates=[1])
+# purchase = pd.read_csv('purchase.csv',
+#                        parse_dates=[1])
+#
+# # print(visits.head())
+# # print(cart.head())
+# # print(checkout.head())
+# # print(purchase.head())
+#
+# #Combining visits with cart and calculating percentage of browsers who do not put anything in the cart
+# visits_cart = pd.merge(visits, cart, how='left')
+# # print(visits_cart.head())
+# count_visit_rows=visits.shape[0]#2000
+# cart_nulls = pd.isnull(visits_cart.cart_time).sum() #1652. Many null rows because people browse more than buy.
+# percent_non_cart = cart_nulls /count_visit_rows #0.826 Browse without proceeding
+# # print(percent_non_buyers)
+#
+# #Combining cart and checkout, and finding percent who fail to checkout once an item is in cart.
+# cart_checkout = pd.merge(cart, checkout, how='left')
+# count_cart_rows=cart.shape[0] #482 total rows of cart activity
+# # print(count_cart_rows)
+# checkout_nulls = pd.isnull(cart_checkout.checkout_time).sum() #122 shoppers left items in their cart without proceeding
+# # print(checkout_nulls)
+# percent_non_checkout = checkout_nulls /count_visit_rows #0.253
+# print(percent_non_checkout)
+#
+# all_data = visits.merge(
+#   cart, how='left').merge(
+#     checkout, how='left').merge(
+#       purchase, how='left')
+# # print(all_data.head(10))
+#
+# count_checkout_rows=all_data['checkout_time'].notnull().sum() #598 visitors made it to checkout
+# print(count_checkout_rows)
+#
+# payment_nulls_count = all_data[(all_data['purchase_time'].isnull()) & (all_data['checkout_time'].notnull())].shape[0] #101 purchases that made it to checkout did not make it to payment.
+# print(payment_nulls_count)
+#
+# percent_non_purchase = payment_nulls_count /count_visit_rows #0.169 about 17% got to the checkout but did not pay.
+#
+# #The weakest part of the funnel is that people browse without putting anything in their cart. Maybe make it easier to put things in the cart?
+#
+# #print(percent_non_purchase)
+#
+# all_data["visit_to_purchase_time"]= all_data.purchase_time - all_data.visit_time
+#
+# # print(all_data.head(10))
+#
+# average_purchase_time = all_data['visit_to_purchase_time'].mean()
+# print(average_purchase_time)
+
+
+
