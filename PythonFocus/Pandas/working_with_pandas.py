@@ -307,3 +307,65 @@ orders['salutation'] = orders.apply(lambda row:'Dear Mr. ' + row['last_name'] if
 ## searching for several things:
 # results = all_data.loc[(all_data.revenue > all_data.target)&(all_data.women > all_data.men)]
 # print(results)
+
+'''Merging with Renaming columns'''
+# orders = pd.read_csv('orders.csv')
+# #print(orders)
+# products = pd.read_csv('products.csv')
+# #print(products)
+#
+# orders_products = pd.merge(
+#   orders.rename(columns={'id':'order_id'}),
+#   products.rename(columns={'id':'product_id'})
+# )
+# print(orders_products)
+
+'''Merging with suffixes'''
+# orders = pd.read_csv('orders.csv')
+# products = pd.read_csv('products.csv')
+#
+# orders_products = pd.merge(
+# 	orders,
+# 	products,
+# 	left_on = 'product_id',
+# 	right_on = 'id',
+# 	suffixes = ['_orders', '_products']
+# )
+#
+# print(orders_products)
+
+'''Merging with OUTER MERGE to preserve all data'''
+# store_a = pd.read_csv('store_a.csv')
+# print(store_a)
+# store_b = pd.read_csv('store_b.csv')
+# print(store_b)
+#
+# store_a_b_outer = pd.merge(store_a, store_b, how='outer')
+# print(store_a_b_outer)
+
+'''Two left merges'''
+# import codecademylib3
+# import pandas as pd
+#
+# store_a = pd.read_csv('store_a.csv')
+# print(store_a)
+# store_b = pd.read_csv('store_b.csv')
+# print(store_b)
+#
+# store_a_b_left = pd.merge(store_a, store_b, how='left')
+# # print(store_a_b_left.head())
+#
+# store_b_a_left = pd.merge(store_b, store_a, how='left')
+# # print(store_b_a_left.head())
+#
+# print(store_a_b_left)
+# print(store_b_a_left)
+
+'''Concatenating Data Frames'''
+# bakery = pd.read_csv('bakery.csv')
+# print(bakery)
+# ice_cream = pd.read_csv('ice_cream.csv')
+# print(ice_cream)
+#
+# menu = pd.concat([bakery, ice_cream])
+# print(menu)
