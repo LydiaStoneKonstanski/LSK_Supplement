@@ -1,0 +1,133 @@
+-- SELECT *
+-- FROM state_climate LIMIT 5;
+--1) Inspect table
+
+-- SELECT state, year, tempf, tempc,
+-- AVG(tempf) OVER(
+--   PARTITION BY state
+--   ORDER BY year
+-- ) AS 'running_avg_temp'
+-- FROM state_climate;
+--2) Now let’s explore the lowest temperatures for each state.
+
+-- SELECT state, year, tempf, tempc,
+--   FIRST_VALUE(tempf) OVER (
+--     PARTITION BY state
+--     ORDER BY tempf
+--   ) AS 'lowest_temp'
+--   FROM state_climate;
+--3) The above returns lowest temp, with rows for every year.
+
+-- SELECT state, year, tempf, tempc
+-- FROM state_climate
+-- WHERE tempf = (
+--     SELECT MIN(tempf)
+--     FROM state_climate AS 'sc'
+--     WHERE sc.state = state_climate.state)
+-- ORDER BY tempf;
+--3) The above returns a table with each of the 50 states labeled, and the lowest
+avg temp year listed with its' value, ordered by the lower of the avg temps to highest
+of the avg temps.
+
+-- SELECT state, year, tempf
+-- FROM state_climate
+-- WHERE state =='West Virginia';
+--checking because the next returns 2 west virgina numbers, but it should be WV year 1921, 54.31666667. Turns out, that number comes up in both 1921 and 2012
+
+-- SELECT state, year, tempf, tempc
+-- FROM state_climate
+-- WHERE tempf = (
+--     SELECT MAX(tempf)
+--     FROM state_climate as 'sc'
+--     WHERE sc.state = state_climate.state)
+-- ORDER BY tempf DESC;
+--4) The above returns a table with each of the 50 states labeled, and the highest
+avg temp year listed with its' value, ordered by the lower of the avg temps to highest of the avg temps.
+
+-- SELECT state, year, tempf, tempc
+-- FROM state_climate
+-- WHERE tempf = (
+--     SELECT MAX(tempf)
+--     FROM state_climate AS 'sc'
+--     WHERE sc.state = state_climate.state)
+-- ORDER BY year DESC;
+--4) The above ordering by year shows that the recorded hottest averages by state
+are overwhelmingly within recent years.
+
+-- SELECT state, year, tempf,
+--   COALESCE(ABS(tempf - LAG(tempf) OVER(
+--     PARTITION BY state
+--     ORDER BY year
+--   )), 0) AS change_in_temp
+-- FROM state_climate
+-- ORDER BY change_in_temp DESC;
+
+--5) This query shows changes in temp from the previous year, and orders by largest swing.
+The Northern US saw the largest changes. Which dates range greatly, but 2013 was major.
+
+-- SELECT RANK() OVER(
+--     ORDER BY tempf ASC
+--   ) AS ranked_coldest,
+--   state,
+--   year,
+--   tempf
+-- FROM state_climate;
+--6) Returns the RANK of coldest temperatures on record for any state or year.
+You really don't want to live in ND. The colder years are in the past.
+
+-- SELECT
+--   RANK() OVER(
+--     ORDER BY MAX(tempf) DESC) AS ranked_warmest,
+--   state,
+--   MAX(tempf) AS warmest_avg_temp
+-- FROM state_climate
+-- GROUP BY state;
+--7) Warmest_rank/state: Altogether the south and particularly Florida returns the highest rank,
+followed by Louisiana. Overall, more recent dates rank higher.
+
+-- SELECT
+--   NTILE(4) OVER(
+--   ORDER BY MIN(tempf) ASC) AS 'quartile',
+--   state,
+--   MIN(tempf) AS coldest_avg_temp
+-- FROM state_climate
+-- GROUP BY state;
+--8) quartile, year, state, tempf, tempc with top quartile = coldest year.
+Top Quartile: ND, MN, MA, MT, VT, WY, WI, NH, MI, ID, SD, NY
+
+-- SELECT
+--   NTILE(5) OVER(
+--   ORDER BY AVG(tempf) ASC) AS 'quintile',
+--   state,
+--   year,
+--   AVG(tempf) AS coldest_year_temp
+-- FROM state_climate
+-- GROUP BY state;
+
+WITH yearly_avg_temps AS (
+    SELECT
+        year,
+        AVG(tempf) AS avg_temp
+    FROM state_climate
+    GROUP BY year
+), quintiles AS (
+    SELECT
+        year,
+        avg_temp,
+        NTILE(5) OVER (ORDER BY avg_temp ASC) AS quintile  -- Coldest years get lowest quintile
+    FROM yearly_avg_temps
+)
+SELECT
+    q.quintile,
+    s.year,
+    s.state,
+    s.tempf
+FROM state_climate s
+JOIN quintiles q ON s.year = q.year
+ORDER BY q.quintile, s.year;
+
+--9) top quintile should be coldest overall, not by state. This rates
+1895, 1899, 1903, 1904, 1905, 1907, 1912, 1916, 1917, 1920, 1924, 1926, 1929,
+1940, 1950, 1958, 1960, 1966, 1967, 1968, 1969, 1972, 1976, 1978, and 1979 as the first quintile years.
+The thing that is different about this showing is that this shows every state average for the year,
+but its the years that are ranked.
